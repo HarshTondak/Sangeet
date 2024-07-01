@@ -8,6 +8,7 @@ import { BiSearch } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
 
 import Button from "./Button";
+import Link from "next/link";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -41,10 +42,14 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         </div>
         <div className="flex md:hidden gap-x-2 items-center">
           <button className="rounded-full p-2 bg-white flex items-center jusitfy-center hover:opacity-75 transition">
-            <HiHome className="text-black" size={20} />
+            <Link href="/">
+              <HiHome className="text-black" size={20} />
+            </Link>
           </button>
           <button className="rounded-full p-2 bg-white flex items-center jusitfy-center hover:opacity-75 transition">
-            <BiSearch className="text-black" size={20} />
+            <Link href="/search">
+              <BiSearch className="text-black" size={20} />
+            </Link>
           </button>
         </div>
         <div className="flex justufy-between items-center gap-x-4">
